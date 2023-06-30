@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MunicipioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 
@@ -19,4 +20,5 @@ use App\Http\Controllers\ProdutoController;
 // });
 
 Route::resource('produtos', ProdutoController::class);
-Route::get('consultar-municipios', [ProdutoController::class, 'consultarMunicipios']);
+Route::get('consultar-municipios', [MunicipioController::class, 'index']);
+
